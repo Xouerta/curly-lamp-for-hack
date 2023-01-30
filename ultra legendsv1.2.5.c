@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 void state(int hp, int hp2, int mp, int mp2, int atk) {
- printf("������ԣ�HP��%d/%d��MP%d/%d�������� %d", hp2, hp, mp2, mp, atk);
+ printf("你的属性：HP：%d/%d，MP%d/%d，攻击力 %d", hp2, hp, mp2, mp, atk);
 };
  
 int main(void)
@@ -11,176 +11,176 @@ int main(void)
  printf("   ===============================================================\n");
  printf("   =                                                             =\n");
  printf("   =                                                             =\n");
- printf("   =                   Ultra       legends      V0.1.3.2         =\n");
+ printf("   =                   Ultra       legends      V0.1.2.5         =\n");
  printf("   =                                                             =\n");
- printf("   =                       ����stdio presents                    =\n");
+ printf("   =                       老张stdio presents                    =\n");
  printf("   =                                                             =\n");
  printf("   ===============================================================\n\n\n\n");
  
  
- printf("������ܣ�\n��ǰ,Ultra��½��һ�����������������񰲾���ҵ�������������÷��١�\n");
- printf("ֱ����һ�죬һͷ�����������׶���������Ұ������ħ��������һ���Ǳ���\n����ץ���˹������������ڳǱ��ĵ����\n");
- printf("�����Ǽ���֣�����ȫ�������˺��٣���λ��ʿ��ɱ���������ȳ���������\n�ѹ����������,���ڽ��̳���λ��\n");
-  printf("���ǣ���һǧ����ʿǰ���˳Ǳ�������ȫ��һȥ�޻ء���\n");
-  printf("���ڣ�������ˣ�����ȫ����ǿ�����ʿ���������Լ��ܳɹ���ܶ������ȳ�������\n");
-  printf("���ڣ�����׼�����׶���һЩ׼��������������׼��������ǰ���Ǳ�����\n\n\n");int h=0; printf("��ѡ��ְҵ��\n1.սʿ Ѫ��*****  �˺�*** ����***�������Ƽ���)\n2.�̿� Ѫ��***  �˺� **** ����***\n3.����  Ѫ��** �˺�*****  ����**\n4.��ʦ  Ѫ��**  �˺�*  ����******\n5.������  Ѫ��***  �˺�** ����**\n\n");
+ printf("剧情介绍：\n从前,Ultra大陆有一个美丽的王国，人民安居乐业，政治清明经济繁荣。\n");
+ printf("直到有一天，一头恶龙来到了首都的西部荒野，它用魔法建立了一座城堡，\n并且抓走了公主，把她关在城堡的地牢里。\n");
+ printf("国王忧急万分，他向全国发出了号召，哪位勇士能杀死恶龙，救出公主，就\n把公主许配给他,并在今后继承王位！\n");
+  printf("可是，有一千名勇士前往了城堡，他们全都一去无回……\n");
+  printf("终于，你出现了！你是全国最强大的勇士，你相信自己能成功打败恶龙，救出公主。\n");
+  printf("现在，你正准备在首都做一些准备，擦亮武器，准备补给，前往城堡……\n\n\n");int h=0; printf("请选择职业：\n1.战士 血量*****  伤害*** 技能***（新手推荐！)\n2.刺客 血量***  伤害 **** 技能***\n3.剑豪  血量** 伤害*****  技能**\n4.法师  血量**  伤害*  技能******\n5.富二代  血量***  伤害** 技能**\n\n");
   scanf("%d",&h);
-  int hp=500 , mp=100 , atk=60 , skill=150;/*�������ǵ�����ֵ��ħ��ֵ�����������������ܹ�����*/
-    int hp2 = hp, mp2 = mp;int gold = 500;/*�������ǵĵ�ǰ����ֵ��ħ��ֵ*/
+  int hp=500 , mp=100 , atk=60 , skill=150;/*定义主角的生命值，魔力值，基础攻击力，技能攻击力*/
+    int hp2 = hp, mp2 = mp;int gold = 500;/*定义主角的当前生命值，魔力值*/
   switch (h) {
   	case 1:{
-  		    //սʿ������ԡ�����
+  		    //战士无需多言。。。
   		break;}
   	case 2:{
-  		hp-=200,hp2-=200,atk+=10,skill+=10;//�̿�
+  		hp-=200,hp2-=200,atk+=10,skill+=10;//刺客
 		   
   		break;}
   	case 3:{
-  		hp-=250,hp2-=250,atk+=40,skill+=20;//����
+  		hp-=250,hp2-=250,atk+=40,skill+=20;//剑豪
 		    
   		break;}
   	case 4:{
-	  	hp-=300,hp2-=300,atk-=20,mp+=100,mp2+=100;//��ʦ
+	  	hp-=300,hp2-=300,atk-=20,mp+=100,mp2+=100;//法师
 		  
 	    break; }	
 	case 5:{
-		hp-=200,hp2-=200,atk-=10,mp-=50,mp2-=50,skill-=50,gold+=500;//������
+		hp-=200,hp2-=200,atk-=10,mp-=50,mp2-=50,skill-=50,gold+=500;//富二代
 	};break;   
-	default:{printf("��������������ѡһ�£�");return 0;}  
+	default:{printf("你的输入错误！重新选一下！");return 0;}  
   }
   
-  int a=0,b=0,c = 0,d=0,e=0,f=0,g=0,k=0,m=0,n=0,criminal=0,core=0;/*���弸���β�*/
-  printf("��ѡ��һ�����������\n1.һ�����Ľ��  2.һ��С��   3.һ��С����  4.һƿ��ǿħ��ҩˮ 5.һ������ʯ 6.ʲôҲ����\n");
+  int a=0,b=0,c = 0,d=0,e=0,f=0,g=0,k=0,m=0,n=0,criminal=0,core=0;/*定义几个形参*/
+  printf("请选择一个出生礼物……\n1.一点额外的金币  2.一把小刀   3.一个小盾牌  4.一瓶增强魔力药水 5.一块幸运石 6.什么也不带\n");
   scanf("%d",&g);
   switch(g){
-  	case 1:printf("������һЩ����Ľ��\n\n");gold+=100;break;
-  	case 2:	printf("���С������үү�������,�ۣܶ�������\n\n");atk+=3;break;
-  	case 3:	printf("��ʵ����һ���ľ�壬��ǿ�ܵ�������\n\n");hp+=20;hp2+=20;break;
-  	case 4:	printf("����Ī���з�β�ƣ��������Ա������ص��Ҿ��ڷ�ʦ�д��ܻ�ӭ\n\n");mp+=50;mp2+=50;break;
-  	case 5:printf("����Ĳ�������Ǹ�ʲô��,����������ã�\n\n");skill+=10;break;
-  	case 6:printf("��������ʿ������������ѡ���\n\n��óɾͣ���ʿ��\n");break;
-  	default:printf("������ˣ���������һ����\n\n");gold+=50;atk+=3;
+  	case 1:printf("你拿了一些额外的金币\n\n");gold+=100;break;
+  	case 2:	printf("这把小刀是你爷爷传给你的,很钝，很生锈\n\n");atk+=3;break;
+  	case 3:	printf("其实这是一块大木板，勉强能当盾牌用\n\n");hp+=20;hp2+=20;break;
+  	case 4:	printf("又名莫洛托夫鸡尾酒，这种来自北境寒地的烈酒在法师中大受欢迎\n\n");mp+=50;mp2+=50;break;
+  	case 5:printf("你真的不这道这是干什么的,或者真的有用？\n\n");skill+=10;break;
+  	case 6:printf("真正的勇士，敢于面对困难……\n\n获得成就：勇士！\n");break;
+  	default:printf("你输错了，随便给你拿一个吧\n\n");gold+=50;atk+=3;
   }
   
   do{
-   printf("�����ڵ�λ���� �����׶���\n��Ŀǰ��״̬��\n");
+   printf("你现在的位置是 王国首都。\n你目前的状态是\n");
    state(hp,hp2,mp,mp2,atk);
-   printf("  �������н��%d��,��Ը֮Դ%d����\n�����ڿ���ȥ:\n",gold,core);
-  printf("1.�����Ǳ� 2.������ 3.�õ� 4.����� 5.ҽԺ 6.�ĳ� 7.��Ը��\n");
+   printf("  你现在有金币%d个,许愿之源%d个。\n你现在可以去:\n",gold,core);
+  printf("1.恶龙城堡 2.武器铺 3.旅店 4.练武馆 5.医院 6.赌场 7.许愿池\n");
   scanf("%d", &c); 
   switch (c){
-  case 1: /*�����Ǳ�*/ {
-   printf("��ȷ����ǰ�������Ǳ���������һ����ս����\nȷ����1//  ȡ��//0\n");
+  case 1: /*恶龙城堡*/ {
+   printf("你确定吗？前往恶龙城堡即将面临一场恶战……\n确定：1//  取消//0\n");
    scanf("%d", &a);
    if (a != 1)
    c = 5;
    break;
   };
-  case 2:/*������*/ {
-   puts("�������������̡�");
-   puts("�ϰ壺��ӭ���٣���Ҫ��ʲô��");
-   printf("1.����-200g 2.����-300g 3.���-200g 4.ʥ��-500g 5.���\n");scanf("%d", &b);
+  case 2:/*武器铺*/ {
+   puts("你来到了武器铺。");
+   puts("老板：欢迎光临！想要点什么？");
+   printf("1.铁剑-200g 2.银剑-300g 3.金盾-200g 4.圣盾-500g 5.打劫\n");scanf("%d", &b);
    switch (b)
    {
-   case 1:/*����*/ {
+   case 1:/*铁剑*/ {
     if (gold < 200) {
-     printf("��Ҳ��㣡");
+     printf("金币不足！");
      
     }
     else
     {
-     puts("��װ����������������+20��");
+     puts("你装备了铁剑，攻击力+20！");
      gold -= 200;atk += 20;
     }
     break;
     ;}
-   case 2:/*����*/{
+   case 2:/*银剑*/{
     if (gold < 300) {
-     printf("��Ҳ��㣡");
+     printf("金币不足！");
  
     }
     else
     {
-     puts("��װ����������������+40��");
+     puts("你装备了银剑，攻击力+40！");
      gold -= 300;atk += 40;
     }
     break;
    };
-   case 3:/*���*/ {
+   case 3:/*金盾*/ {
     if (gold < 200) {
-     printf("��Ҳ��㣡");
+     printf("金币不足！");
  
     }
     else
     {
-     puts("��װ���˽�ܣ��������+300��");
+     puts("你装备了金盾，最大生命+300！");
      gold -= 200;hp += 300;hp2 += 300;
     }
     break;
     }
-   case 4:/*ʥ��*/ {
+   case 4:/*圣盾*/ {
     if (gold < 500) {
-     printf("��Ҳ��㣡");
-     printf("�ϰ�˵����������ʥ�ܣ��Ҷ�����!��");
+     printf("金币不足！");
+     printf("老板说：“你买不起圣盾！我都买不起!”");
  
     }
     else
     {
-     puts("��װ����ʥ�ܣ��������+500�����⼼�ܵĻ����˺�����ˣ�");
-     puts("��óɾͣ�ʥ��ʿ��");
+     puts("你装备了圣盾，最大生命+500！特殊技能的基础伤害提高了！");
+     puts("获得成就：圣剑士！");
      gold -= 500;hp += 500;hp2 += 500;skill += 100;
     };
     break;
    }
-   case 5:{int y=0;printf("��ȷ����\n1.ȷ�� 2.����");scanf("%d",&y);
+   case 5:{int y=0;printf("你确定吗？\n1.确定 2.算了");scanf("%d",&y);
    if(y!=1){break;}
    else {
-   	printf("�����һ���ϰ壡\n�ϰ������ˣ�\n�����һ�ܣ�����������㣡��");
-   	int hp8 = 800,atk8=100 ;/*�������Ѫ����������*/
+   	printf("你打了一下老板！\n老板生气了！\n“想打一架？老子乐意奉陪！”");
+   	int hp8 = 800,atk8=100 ;/*定义敌人血量、攻击力*/
 	   		  
-	   		  printf("\n��۲쵽�ϰ廹��800������!\n");
-	   		  do/*�����׶�*/
+	   		  printf("\n你观察到老板还有800点生命!\n");
+	   		  do/*操作阶段*/
 	   		  {
-	   		   printf("�ֵ����ж��ˣ�\n1.��ͨ���� 2.���⼼�� 3.��Ϣ 4.�ж�ս������");
+	   		   printf("轮到你行动了！\n1.普通攻击 2.特殊技能 3.休息 4.判断战局形势");
 	   		   scanf("%d", &b);
 	   		   switch (b) {
 	   		   case 1: {hp8 -= atk;
-	   		    printf("�����ϰ��Ϳ��˹�ȥ���ϰ��ܵ�%d���˺����ϰ廹��%d��Ѫ��!\n", atk,hp8);
+	   		    printf("你向老板猛砍了过去！老板受到%d点伤害！老板还有%d点血量!\n", atk,hp8);
 	   		    
 	   		    break;
 	   		   };
-	   		   case 2: {//hp3 -= skill,mp2-=skill*0.75;�ϰ�
+	   		   case 2: {//hp3 -= skill,mp2-=skill*0.75;废案
 	   		     if (mp2>0)
 	   		     	{
 	   				 hp8 -= skill,mp2-=50;
 	   				 switch (h) {
 	   				 	case 1:
-	   				 		 printf("����ϰ�ʹ���˼��ܣ�ʮ��ն���ϰ��ܵ�%d���˺����ϰ廹��%d��Ѫ��!�㻹ʣ%d��������\n", skill,hp8,mp2);
+	   				 		 printf("你对老板使用了技能：十字斩！老板受到%d点伤害！老板还有%d点血量!你还剩%d点能量！\n", skill,hp8,mp2);
 	   				 		break;
 	   				 	case 2:
-	   				 		 printf("����ϰ�ʹ���˼��ܣ���ӰͻϮ���ϰ��ܵ�%d���˺����ϰ廹��%d��Ѫ��!�㻹ʣ%d��������\n", skill,hp8,mp2);
+	   				 		 printf("你对老板使用了技能：暗影突袭！老板受到%d点伤害！老板还有%d点血量!你还剩%d点能量！\n", skill,hp8,mp2);
 	   				 		break;
 	   				 	case 3:
-	   				 		 printf("����ϰ�ʹ���˼��ܣ���֮ս���ϰ��ܵ�%d���˺����ϰ廹��%d��Ѫ��!�㻹ʣ%d��������\n", skill,hp8,mp2);
+	   				 		 printf("你对老板使用了技能：万剑之战！老板受到%d点伤害！老板还有%d点血量!你还剩%d点能量！\n", skill,hp8,mp2);
 	   				 		break;
 	   				 	case 4:
-	   				 		 printf("����ϰ�ʹ���˼��ܣ�ħ���Ⲩ���ϰ��ܵ�%d���˺����ϰ廹��%d��Ѫ��!�㻹ʣ%d��������\n", skill,hp8,mp2);
+	   				 		 printf("你对老板使用了技能：魔法光波！老板受到%d点伤害！老板还有%d点血量!你还剩%d点能量！\n", skill,hp8,mp2);
 	   					 	break;
 	   					case 5:	
-	   					      printf("����ϰ�ʹ���˼��ܣ���Ǯ���ܣ��ϰ��ܵ�%d���˺����ϰ廹��%d��Ѫ��!�㻹ʣ%d��������\n", skill,hp8,mp2);
+	   					      printf("你对老板使用了技能：金钱万能！老板受到%d点伤害！老板还有%d点血量!你还剩%d点能量！\n", skill,hp8,mp2);
 	   					break;
 	   				 }
 	   				 
 	   		     	}
 	   			else
 	   				{
-	   					printf("�Ƿ���������������ľ��ˣ�");
+	   					printf("非法操作！你的能量耗尽了！");
 	   					hp8-=0,mp2-=0;
 	   				}
 	   			break;
 	   		   };
 	   		   case 3: {
-	   		    printf("�㿪ʼ��Ϣ��Ѫ����ָ���50��HP��50��MP��\n");
+	   		    printf("你开始休息回血。你恢复了50点HP，50点MP！\n");
 	   		    hp2 += 50;mp2 += 50;
 	   		    if (hp2 > hp)
 	   		    {
@@ -189,124 +189,124 @@ int main(void)
 	   		    if (mp2 > mp)
 	   		    {
 	   		     mp2 = mp;
-	   		    };/*��ֹ��ֵ���*/
+	   		    };/*防止数值溢出*/
 	   		    break;
 	   		   }
-	   		   case 4:state(hp, hp2, mp, mp2, atk);printf("\nɽ������%d��Ѫ��",hp8);
+	   		   case 4:state(hp, hp2, mp, mp2, atk);printf("\n山贼还有%d点血量",hp8);
 	   		   };
 	   		   hp2 -= atk8;
-	   		   printf("�ϰ����һ�£����������%d���˺����㻹ʣ%d��Ѫ����", atk8,hp2);
+	   		   printf("老板打了一下！对你造成了%d点伤害！你还剩%d点血量！", atk8,hp2);
 	   		   if (hp2 <= 0) {
-	   		    printf("\n\n�㱻ɱ����!�����ˣ�");
-	   		    printf("��Ϸ�������밴ENTER���˳���");
+	   		    printf("\n\n你被杀死了!你死了！");
+	   		    printf("游戏结束。请按ENTER键退出。");
 	   		    return 0;
 	   		 
 	   		    
 	   		   };
 	   		     
 	   		  } while (hp8 > 0);
-	   		  printf("\n��ɱ�����ϰ壡���������е�װ����Ǯ����ɱ���ˣ����Ƿ����ģ�����ڵģ�\n");criminal+=1;
+	   		  printf("\n你杀死了老板！拿走了所有的装备和钱！你杀人了！这是犯法的！你会后悔的！\n");criminal+=1;
 	   		  gold+=900,atk+=90,hp+=900,hp2+=900;
    }}
 }
    break;
    };
-  case 3:/*�õ�*/ {
-   puts ("�㿴���ù����кܶ��ˡ�����Ҫ��˭\n1.���Ե�Сͯ�� 2.һ�����ص��� 3.�õ��ϰ� 4.Ư�����ϰ�Ů�� 5.һ������������� 6.�ͽ𾯹�");scanf("%d",&f);
+  case 3:/*旅店*/ {
+   puts ("你看到旅馆里有很多人……你要找谁\n1.门旁的小童仆 2.一个神秘的人 3.旅店老板 4.漂亮的老板女儿 5.一个鬼鬼祟祟的人 6.赏金警官");scanf("%d",&f);
    switch (f){
-   	case 1:{printf("Сͯ��˵������ÿ����Ȼ���ۣ�����ÿ�춼�������ָ�������Ȥ���ˣ������Ǹ����ص��ˣ����ˣ��������ҵ����룺��Ҳ������һ���������磡�����ܹ���Ǯ��һ��Ҫȥ��\n��Ц��Ц����û��˵ʲô");break;} 
+   	case 1:{printf("小童仆说：“我每天虽然很累，但我每天都遇到各种各样的有趣的人，比如那个神秘的人，对了，告诉你我的梦想：我也想像你一样周游世界！等我攒够了钱我一定要去！\n你笑了笑，并没有说什么");break;} 
    case 2:{
-   printf("�㿴���ù����и����Ŷ�������ص��ˣ����㲻�ܿ��������������߽�ʱ����¶���˹����Ц�ݣ���ι�������ˣ������ҿ��ˣ�����2��ң�������ƿ��ѿ�ƣ���\n");
+   printf("你看到旅馆里有个披着斗篷的神秘的人，，你不能看清他的脸，你走进时那人露出了诡异的笑容，“喂，年轻人，现在我渴了，给你2金币，帮我买瓶麦芽酒！”\n");
    gold+=2;
-   printf("��Ӿƹ��ϰ���������ѿ�ƣ�����ѾƵݸ���ʱ����Ц�����������������ٸ���������ң������ǽ����ˣ���\n");
-   printf("�����Ժ���ټ���ģ������ˣ�\n");
-   printf("�������һ����ֵ���,���뵽���׸�����Ǯ������û��ô��...\n");
-   printf("������ʲô��\n5//�������ڸ�ʲô\n6//������л���뿪\n");
+   printf("你从酒馆老板中买到了麦芽酒！当你把酒递给他时，他笑道：“不错不错，再给你两个金币，就算是奖励了！”\n");
+   printf("我们以后会再见面的！年轻人！\n");
+   printf("这可真是一个奇怪的人,你想到，白给别人钱？好像没那么简单...\n");
+   printf("你打算干什么？\n5//质问他在干什么\n6//向他道谢并离开\n");
    scanf("%d",&d);
    if (d!=6)
    {
-   	printf("��������ת��ͷ����������ʮ�ֲ��ϣ���ЦЦ����˵������Ҫ���°������ӡ�ϣ������սʤ����ʱ����һ����ǰ��˵�ձ㻯����Ӱ��ʧ�ˣ�����һ����ֵĸо���Ȼ����ʧ��\n");
+   	printf("那神秘人转过头，他的脸旁十分苍老，他笑笑对你说：“不要害怕啊，孩子。希望你在战胜恶龙时，能一往无前”说罢便化作黑影消失了，你有一种奇怪的感觉，然后消失了\n");
    }
    else
     {
-	printf("��������˵��������,û�뵽�㻹��ô����ò����������һ��ף��......����о������������ǿ��\n");
+	printf("那神秘人说：“哈哈,没想到你还这么有礼貌，我赠与你一个祝福......”你感觉你的力量在增强！\n");
 	}
    
    	atk+=5;
 
       break;}
-    case 3:{printf("�ϰ�̸���Ź����Լ����õ꾭���а��ֵ�����...�������Ƿ�Ը���뵱�ƹݵı�����\n����ò�ػؾ��������Ͼ�һ����������˥���������ϣ�");break;} 
-    case 4:{printf("����ϰ��Ů���ĵĺ���죬�ϰ�Ů��˵������ϣ���Լ��ܼ޸��ڹ���һλӢ����������ʿ�����Һ�����Լ��İְ����������Լ�������");break;}  
-    case 5:{printf("�Ǹ��˶߶����µؿ����㣬��о����Ծ�\n");
-    printf("������ʲô��\n");
-    printf("1.ץס����������ô����   2.��֮����\n");
+    case 3:{printf("老板谈论着关于自己的旅店经常有扒手的问题...并问你是否愿意想当酒馆的保安，\n你礼貌地回绝了他，毕竟一个王国的兴衰都在你手上！");break;} 
+    case 4:{printf("你和老板的女儿聊的很愉快，老板女儿说她经常希望自己能嫁给邻国的一位英俊的年轻骑士，并且很厌恶自己的爸爸总是限制自己的自由");break;}  
+    case 5:{printf("那个人哆哆嗦嗦地看向你，你感觉不对劲\n");
+    printf("你打算干什么？\n");
+    printf("1.抓住他，问他怎么回事   2.置之不理\n");
 	scanf("%d",&e);
 	if (e!=2)
 	{
-		printf("���˶߶����µ�˵�������������������٣����䡭��Ѫϴ��ء���Ӧ�����ŷ��ˣ��㿴�����������ϱ���һö��ʨ�ӻ��£�ԭ�����ǻʼһ����ӵ��ˣ�\n");
-		printf("�������ľ��������,�ʼһ����ӵ�ѡ��ʮ���ϸ������������˾����ᱻѡ���ġ�����˵���˻ʼһ����ӵ��Ĵ�\n");
-		printf("ֻ����Ц�����������������������������һ������\n");
-		printf("��Ц�����Һ�����������ˡ���\n�㲻���������\n������������ֱ������������ɱ���������İְ֡�����\n");
-		printf("��ߣ�����ӣ�ֻ�����ĸ첲�ϲ����˺�ɫ�����ۣ�\n���ұ���ѡ��ֻ��װ����ɵ�����ˣ����ص��������ȴ��ҵ�Ҳ����·һ����������\n");
-		printf("�����ˣ���֪���ȥ���������������ֻ��ǿ��ĺ���Ѫ���������ⲡ���������Ҫ������λ�������ˣ�ͬʱҲҪ�����Լ���\n��лл�������ˣ�������Ѻ���ʯذ�ף�ϣ����������ã���");
+		printf("那人哆哆嗦嗦地说：“龙……神龙…降临，诅咒……血洗大地”他应该是吓疯了，你看到他的衣领上别着一枚金狮子徽章，原来他是皇家护卫队的人！\n");
+		printf("但你多年的经验告诉你,皇家护卫队的选拔十分严格，心理脆弱的人绝不会被选进的……你说出了皇家护卫队的誓词\n");
+		printf("只见他笑道：“且随我来”你跟着他来到了一处角落\n");
+		printf("他笑道，我和你很像，年轻人……\n你不解地望着他\n“屠龙者最后又变成了龙……我杀了这条龙的爸爸……”\n");
+		printf("他撸起袖子，只见他的胳膊上布满了黑色的龙鳞！\n“我别无选择，只能装疯卖傻活着了，若回到王国，等待我的也是死路一条，哎！”\n");
+		printf("你震惊了！不知如何去做，最后他告诉你只有强大的黑龙血才能治疗这病……你决计要帮助这位可怜的人，同时也要帮助自己！\n“谢谢你年轻人！带上这把黑曜石匕首！希望这对你有用！”");
 		atk+=5;
 	}
 	else{
-		printf("��������ˡ���\n");
-		printf("�����ܸо����Ծ�����");
+		printf("你独自走了……\n");
+		printf("但你总感觉不对劲……");
 	};break;
 	}
-    case 6:{printf("����Ц������С���ӣ�ȱǮ������������񣡡�\n���Ƿ�Ҫ��������\n3.����\n4.������");
+    case 6:{printf("警官笑道：“小伙子，缺钱不？给你个任务！”\n你是否要接受任务？\n3.接受\n4.不接受");
     scanf("%d",&m);
 	if(m!=4){
-		printf("����Ц�ˣ��������һ��ɽ���������ܱߵ������ﵷ�ң���ȥ�������ǰɣ���\n�ǻ�С���������û�������������˲��ҵ���ɽ����");
-		printf("��������ɽկ���������ɽ����������������ʼ��ս����\n");
-		  printf("ɽ�����������������������ģ��ɵ����ֵ��ǣ�������");
-		  int hp4 = 400,atk4=20 ;/*�������Ѫ����������*/
+		printf("警长笑了：“最近有一伙山贼常常在周边的镇子里捣乱，你去肃清他们吧！”\n那伙小贼你根本就没放在眼里，你出发了并找到了山贼！");
+		printf("你来到了山寨，你见到了山贼！你抽出长剑，开始了战斗！\n");
+		  printf("山贼道：“今天又来个找死的！干掉他兄弟们！！！”");
+		  int hp4 = 400,atk4=20 ;/*定义敌人血量、攻击力*/
 		  
-		  printf("\n��۲쵽ɽ������400������!\n");
-		  do/*�����׶�*/
+		  printf("\n你观察到山贼还有400点生命!\n");
+		  do/*操作阶段*/
 		  {
-		   printf("�ֵ����ж��ˣ�\n1.��ͨ���� 2.���⼼�� 3.��Ϣ 4.�ж�ս������");
+		   printf("轮到你行动了！\n1.普通攻击 2.特殊技能 3.休息 4.判断战局形势");
 		   scanf("%d", &b);
 		   switch (b) {
 		   case 1: {hp4 -= atk;
-		    printf("����ɽ���Ϳ��˹�ȥ��ɽ���ܵ�%d���˺���ɽ������%d��Ѫ��!\n", atk,hp4);
+		    printf("你向山贼猛砍了过去！山贼受到%d点伤害！山贼还有%d点血量!\n", atk,hp4);
 		    
 		    break;
 		   };
-		   case 2: {//hp3 -= skill,mp2-=skill*0.75;�ϰ�
+		   case 2: {//hp3 -= skill,mp2-=skill*0.75;废案
 		     if (mp2>0)
 		     	{
 				 hp4 -= skill,mp2-=50;
 				 switch (h) {
 				 	case 1:
-				 		 printf("���ɽ��ʹ���˼��ܣ�ʮ��ն��ɽ���ܵ�%d���˺���ɽ������%d��Ѫ��!�㻹ʣ%d��������\n", skill,hp4,mp2);
+				 		 printf("你对山贼使用了技能：十字斩！山贼受到%d点伤害！山贼还有%d点血量!你还剩%d点能量！\n", skill,hp4,mp2);
 				 		break;
 				 	case 2:
-				 		 printf("���ɽ��ʹ���˼��ܣ���ӰͻϮ��ɽ���ܵ�%d���˺���ɽ������%d��Ѫ��!�㻹ʣ%d��������\n", skill,hp4,mp2);
+				 		 printf("你对山贼使用了技能：暗影突袭！山贼受到%d点伤害！山贼还有%d点血量!你还剩%d点能量！\n", skill,hp4,mp2);
 				 		break;
 				 	case 3:
-				 		 printf("���ɽ��ʹ���˼��ܣ���֮ս��ɽ���ܵ�%d���˺���ɽ������%d��Ѫ��!�㻹ʣ%d��������\n", skill,hp4,mp2);
+				 		 printf("你对山贼使用了技能：万剑之战！山贼受到%d点伤害！山贼还有%d点血量!你还剩%d点能量！\n", skill,hp4,mp2);
 				 		break;
 				 	case 4:
-				 		 printf("���ɽ��ʹ���˼��ܣ�ħ���Ⲩ��ɽ���ܵ�%d���˺���ɽ������%d��Ѫ��!�㻹ʣ%d��������\n", skill,hp4,mp2);
+				 		 printf("你对山贼使用了技能：魔法光波！山贼受到%d点伤害！山贼还有%d点血量!你还剩%d点能量！\n", skill,hp4,mp2);
 					 	break;
 					case 5:	
-					      printf("���ɽ��ʹ���˼��ܣ���Ǯ���ܣ�ɽ���ܵ�%d���˺���ɽ������%d��Ѫ��!�㻹ʣ%d��������\n", skill,hp4,mp2);
+					      printf("你对山贼使用了技能：金钱万能！山贼受到%d点伤害！山贼还有%d点血量!你还剩%d点能量！\n", skill,hp4,mp2);
 					break;
 				 }
 				 
 		     	}
 			else
 				{
-					printf("�Ƿ���������������ľ��ˣ�");
+					printf("非法操作！你的能量耗尽了！");
 					hp4-=0,mp2-=0;
 				}
 			break;
 		   };
 		   case 3: {
-		    printf("�㿪ʼ��Ϣ��Ѫ����ָ���50��HP��50��MP��\n");
+		    printf("你开始休息回血。你恢复了50点HP，50点MP！\n");
 		    hp2 += 50;mp2 += 50;
 		    if (hp2 > hp)
 		    {
@@ -315,23 +315,23 @@ int main(void)
 		    if (mp2 > mp)
 		    {
 		     mp2 = mp;
-		    };/*��ֹ��ֵ���*/
+		    };/*防止数值溢出*/
 		    break;
 		   }
-		   case 4:state(hp, hp2, mp, mp2, atk);printf("\nɽ������%d��Ѫ��",hp4);
+		   case 4:state(hp, hp2, mp, mp2, atk);printf("\n山贼还有%d点血量",hp4);
 		   };
 		   hp2 -= atk4;
-		   printf("�ֵ�ɽ���ж��ˣ�ɽ������������ذ�ף����������%d���˺����㻹ʣ%d��Ѫ����", atk4,hp2);
+		   printf("轮到山贼行动了！山贼戳刺着他的匕首！对你造成了%d点伤害！你还剩%d点血量！", atk4,hp2);
 		   if (hp2 <= 0) {
-		    printf("\n\n�㱻ɱ����!�����ˣ��㱻ɽ������ˣ��ⶼ�򲻹����Ͻ��ؿ��ɣ�");
-		    printf("��Ϸ�������밴ENTER���˳���");scanf("%d", &a);
+		    printf("\n\n你被杀死了!你死了！你被山贼打败了！这都打不过，赶紧重开吧！");
+		    printf("游戏结束。请按ENTER键退出。");scanf("%d", &a);
 		    return 0;
 		 
 		    
 		   };
 		     
 		  } while (hp4 > 0);
-		  printf("\nɽ�����������ˣ��������ɽ���������ɽ����ͷ�������������������ĵ�Ц�ˣ��������úܺã������ˣ�������Ľ�����\n��ý��100����Ը֮Դһ������Ҳ����Ըʱ�����ϣ���");
+		  printf("\n山贼被你消灭了！你击败了山贼！你带着山贼的头巾来见警长，警长会心地笑了：“你做得很好！年轻人！这是你的奖励！\n获得金币100！许愿之源一个！（也许许愿时能用上？）");
 		  gold+=100,core+=1;
 	}
 	
@@ -340,57 +340,57 @@ int main(void)
 	  
   };break;
   }
-  case 4:/*�����*/ {
-   puts("��Ҫ��˭��\n1.ʥ��ʿ-70g 2.��սʿ-100g 3.��ʦ-50g 4.�뿪");scanf("%d", &b);
+  case 4:/*练武馆*/ {
+   puts("你要找谁？\n1.圣骑士-70g 2.狂战士-100g 3.法师-50g 4.离开");scanf("%d", &b);
    switch (b) {
    case 1: {
     if (gold < 70) {
-     printf("��Ҳ��㣡");
-     printf("ʥ��ʿ�����˵���������ˣ���һ��Ҫ������ʿ�淶������");
+     printf("金币不足！");
+     printf("圣骑士严肃地说：“年轻人，你一定要遵守骑士规范啊。”");
  
     }
     else
     {
-     puts("���⼼�ܵĻ����˺�����ˣ���Ŀ��������ˣ�");
+     puts("特殊技能的基础伤害提高了！你的抗性提升了！");
      gold -= 70;skill += 50;hp+=20;hp2+=20;
-     printf("ʥ��ʿ˵������Ľ���������ο��Ը���ܴ�ܶ�������");
+     printf("圣骑士说：“你的进步让我欣慰！愿你能打败恶龙！”");
     };
     break;
    }
    case 2: {
     if (gold < 100) {
-     printf("��Ҳ��㣡");
-     printf("��սʿ�����˵�����������ѧ���ܵ�ҪǮ����");
+     printf("金币不足！");
+     printf("狂战士轻蔑地说到：“穷鬼，学技能得要钱！”");
  
     }
     else
     {
-     puts("��Ĺ��������˺�����ˣ��������ֵ�����ˣ�");
+     puts("你的攻击基础伤害提高了！最大生命值提升了！");
      gold -= 100;atk += 20;hp+=50;hp2+=50;
-      printf("��սʿ˵������Ľ���������ο����ܱ���Ҷ�������");
+      printf("狂战士说：“你的进步让我欣慰！打架别给我丢脸！”");
     };
     break;
    }
    case 3: {
     if (gold < 50) {
-     printf("��Ҳ��㣡");
-     printf("��ʦ̾����������Ϊ��ʦ��ҲҪ���Һ��ڰ�����ЩǮ��������");
+     printf("金币不足！");
+     printf("法师叹道：“我身为法师，也要养家糊口啊，这些钱不够！”");
  
     }
     else
     {
-     puts("��ķ���ֵ�����ˣ�");
+     puts("你的法力值上升了！");
      gold -= 50;mp += 50;mp2 += 50;
-      printf("��ʦ˵������Ľ���������ο��Ը���ܸ��õ�ʹ�����ħ������");
+      printf("法师说：“你的进步让我欣慰！愿你能更好地使用你的魔法！”");
     };
     break;}
    case 4:break;
-   default: {printf("����������");break;}
+   default: {printf("你的输入错误！");break;}
    
    };
    
   };break;
-  case 5:/*ҽԺ*/{printf("50�������������ʹ���ָ�����������\n1.����\n2.����");
+  case 5:/*医院*/{printf("50金币治愈所有伤痛！恢复所有能量！\n1.治疗\n2.算了");
   scanf("%d",&n);
   if(n!=2){
   	hp2 += 9999;mp2 += 9999,gold-=50;
@@ -405,102 +405,102 @@ int main(void)
   };
 
   };break;
-  case 6:/*�ĳ�*/{int guess,deal;
+  case 6:/*赌场*/{int guess,deal;
   srand((unsigned)time(NULL));
   int magic=rand()%100+1;
   int counter=0;
-  	printf("��ӭ����С��˹�ӣ�����Ķľ��ǲ����֣���������в�ͬ�Ľ������֮�����Ǯ��\n�������ע���٣�");scanf("%d",&deal);gold-=deal;
+  	printf("欢迎来到小拉斯加！这里的赌局是猜数字！五次以内有不同的奖金！五次之外就输钱！\n你打算下注多少？");scanf("%d",&deal);gold-=deal;
 
 	        
-	               do{   printf("��һ������:����");
+	               do{   printf("猜一个数字:‘‘");
 	                scanf("%d",&guess);
 	               counter++;
 	              if(guess>magic)
-	              printf("�´��ˣ�\n");
+	              printf("猜大了！\n");
 	              else
 	  
 	                  if(guess<magic)
-	                      printf("��С��!\n");
+	                      printf("猜小了!\n");
 	                   else
-	                  printf("�¶���!\n") ;
+	                  printf("猜对了!\n") ;
 	  
 	      }while(guess!=magic);
-	          printf("��һ������%d��\n",counter);
+	          printf("你一共猜了%d次\n",counter);
 	          switch(counter)
 	          {
-	              case 1:printf("����֮��\n");gold+=deal*5;break;
-	              case 2:printf("��������,ȥ���Ʊ��\n");gold+=deal*3;break;
-	              case 3:printf("��������\n");gold+=deal*2.5;break;
-	              case 4:printf("������΢��һ��\n");gold+=deal*1.5;break;
-	              case 5:printf("����ˮƽ\n");gold+=deal*1.25;break;
-	              default:printf("�����ˣ��ؼ�����������ɣ�\n");
+	              case 1:printf("天命之子\n");gold+=deal*5;break;
+	              case 2:printf("运气爆棚,去买彩票吧\n");gold+=deal*3;break;
+	              case 3:printf("不错不错\n");gold+=deal*2.5;break;
+	              case 4:printf("运气稍微好一点\n");gold+=deal*1.5;break;
+	              case 5:printf("正常水平\n");gold+=deal*1.25;break;
+	              default:printf("你输了！回家再练个几年吧！\n");
 	          }
-	          if (gold<0){printf("��Ƿ��һƨ��ծ���㱻������һ�ٲ��ӳ��˶ĳ���");hp2-=50;}
+	          if (gold<0){printf("你欠了一屁股债！你被暴打了一顿并扔出了赌场！");hp2-=50;}
 	      
   };break;
-  case 7:/*��Ը�س鿨*/{
-  puts("�������˳����������Ը���У���ˮ���峺�����һ����Ž�ɫ�Ĺ�â����˵����ʥȪ��Ҳ����Ը������Ч��");
- printf("�������Ը��\n1:����һ�����Կ�2:үҪʮ���飡3:���ˣ����Ƿ����ˡ���\n");
+  case 7:/*许愿池抽卡*/{
+  puts("你来到了城市中央的许愿池中，池水很清澈，并且还发着金色的光芒，据说这是圣泉，也许祈愿真有奇效？");
+ printf("你打算许愿吗？\n1:单抽一发试试看2:爷要十连抽！3:算了，我是非洲人……\n");
  scanf("%d",&k);
  if(core<1)
  {
- 	printf("�㻹û����Ը֮ԴŶ��ȥ�Ҿ����������ðɣ�");break;
+ 	printf("你还没有许愿之源哦！去找警官做任务获得吧！");break;
  }
  else{
  switch(k){
- 	case 1:{printf("����Ͷ����Ը֮Դ��һ�̣���ˮɢ����������ɫ�Ĺ�â����Ȼ��");
+ 	case 1:{printf("在你投下许愿之源的一刻，池水散发着五颜六色的光芒……然后");
  	core-=1;
 	 srand((unsigned)time(NULL));
 	 if (rand()%1001-70<0)//gold
 	 {
-	 	printf("��ǳ������ػ�Ӧ����ĺ�������鵽�˵���UP������Ϊ����֮���⣡ע���ⲻ�ǹ���");
+	 	printf("神非常积极地回应了你的呼唤！你抽到了当期UP武器名为雉草之道光！注意这不是梗！");
 	 	hp+=300,hp2+=300,atk+=100;
 	 }
 	 else
 	 {
 	 if(rand()%1001-190<0)	
-	 {printf("������ػ�Ӧ����ĺ�������õ���");  
+	 {printf("神认真地回应了你的呼唤，你得到了");  
 	 srand((unsigned)time(NULL));
 	 	int chara=rand()%10+1;
 	 	if (1 == chara)
 		  {
-		   printf("�����ﳤ����Ϊ����֮��\n");
+		   printf("★☆★☆★长剑名为火焰之剑\n");
 		  }
 		  else if (2 == chara)
 		  {
-		   printf("�����ﳤ����Ϊ��˪֮��\n");
+		   printf("★☆★☆★长剑名为冰霜之剑\n");
 		  }
 		  else if (3 == chara)
 		  {
-		   printf("������綾ذ����Ϊ��ѵ�����Ϳ�˶���\n");
+		   printf("★☆★☆★剧毒匕首名为这把刀可是涂了毒的\n");
 		  }
 		  else if (4 == chara)
 		  {
-		   printf("�����ﳤ����Ϊ������\n");
+		   printf("★☆★☆★长剑名为屠龙剑\n");
 		  }
 		  else if (5 == chara)
 		  {
-		   printf("������ս����Ϊ������\n");
+		   printf("★☆★☆★战锤名为粉碎者\n");
 		  }
 		  else if (6 == chara)
 		  {
-		   printf("������ս����Ϊ˺����\n");
+		   printf("★☆★☆★战斧名为撕裂者\n");
 		  }
 		  else if (7 == chara )
 		  {
-		   printf("�����Ȩ����Ϊ������ͽ\n");
+		   printf("★☆★☆权杖名为安德门徒\n");
 		  }
 		  else if (8 == chara)
 		  {
-		   printf("������һ��ħ�����٣�\n");
+		   printf("★☆★☆★一把魔法竖琴？\n");
 		  }
 		  else if (9 == chara)
 		  {
-		   printf("�����ս����Ϊʳ��ħ\n");
+		   printf("★☆★☆战锤名为食人魔\n");
 		  }
 		  else if (10 == chara)
 		  {
-		   printf("�����������Ϊ����֮��\n");
+		   printf("★☆★☆阔剑名为复仇之刃\n");
 		  }
 	 	//sliver
 	 	hp+=150,hp2+=150,atk+=70;
@@ -509,11 +509,11 @@ int main(void)
 	 {
 	 	if(rand()%1001-500<0)
 	 	{
-		 	printf("���ʲݵػ�Ӧ���㣬������һ�ѻ���պϵĸ���\n");
+		 	printf("神潦草地回应了你，给了你一把还算凑合的斧子\n");
 		 	hp+=50,hp2+=50,atk+=30;
 		 }
 		 else{
-		 	printf("��û������\n");
+		 	printf("神没搭理你\n");
 		 }
 	 }
 	 }
@@ -522,11 +522,11 @@ int main(void)
  	case 2:{
 	 	if(core<10)
 	 	{
-		 	printf("��û���ܹ�ʮ����Ը֮ԴŶ��ȥ�Ҿ����������ðɣ�");break;
+		 	printf("还没有攒够十个许愿之源哦！去找警官做任务获得吧！");break;
 		 }
 		 else
 		{
-			 printf("��ֱ������ˮ������ʮ����Ը֮Դ����ˮɢ���Ÿ�ǿ��������ɫ�Ĺ�â�����Ǵ������漣�� ���꣡\n\n");
+			 printf("你直接往池水里扔了十个许愿之源，池水散发着更强的五颜六色的光芒，还是大力出奇迹啊 少年！\n\n");
 				 {
 				 	srand((unsigned)time(NULL));
 				 	for(int i=0;i<10;i++)
@@ -534,54 +534,54 @@ int main(void)
 					 	core-=1;
 						 	 if (rand()%1001-70<0)//gold
 						 	 {
-						 	 	printf("��ǳ������ػ�Ӧ����ĺ�������鵽�˵���UP������Ϊ����֮���⣡ע���ⲻ�ǹ���\n");
+						 	 	printf("神非常积极地回应了你的呼唤！你抽到了当期UP武器名为雉草之道光！注意这不是梗！\n");
 						 	 	hp+=100,hp2+=100,atk+=50;
 						 	 }
 						 	 else
 						  {
 						 	 if(rand()%1001-190<0)	
-						 	 {printf("������ػ�Ӧ����ĺ�������õ���\n"); 
+						 	 {printf("神认真地回应了你的呼唤，你得到了\n"); 
 							  srand((unsigned)time(NULL));
 							  int chara=rand()%10+1;
 						 	 	if (1 == chara)
 						 		  {
-						 		   printf("�����ﳤ����Ϊ����֮��\n");
+						 		   printf("★☆★☆★长剑名为火焰之剑\n");
 						 		  }
 						 		  else if (2 == chara)
 						 		  {
-						 		   printf("�����ﳤ����Ϊ��˪֮��\n");
+						 		   printf("★☆★☆★长剑名为冰霜之剑\n");
 						 		  }
 						 		  else if (3 == chara)
 						 		  {
-						 		   printf("������綾ذ����Ϊ��ѵ�����Ϳ�˶���\n");
+						 		   printf("★☆★☆★剧毒匕首名为这把刀可是涂了毒的\n");
 						 		  }
 						 		  else if (4 == chara)
 						 		  {
-						 		   printf("�����ﳤ����Ϊ������\n");
+						 		   printf("★☆★☆★长剑名为屠龙剑\n");
 						 		  }
 						 		  else if (5 == chara)
 						 		  {
-						 		   printf("������ս����Ϊ������\n");
+						 		   printf("★☆★☆★战锤名为粉碎者\n");
 						 		  }
 						 		  else if (6 == chara)
 						 		  {
-						 		   printf("������ս����Ϊ˺����\n");
+						 		   printf("★☆★☆★战斧名为撕裂者\n");
 						 		  }
 						 		  else if (7 == chara )
 						 		  {
-						 		   printf("�����Ȩ����Ϊ������ͽ\n");
+						 		   printf("★☆★☆权杖名为安德门徒\n");
 						 		  }
 						 		  else if (8 == chara)
 						 		  {
-						 		   printf("������һ��ħ�����٣�\n");
+						 		   printf("★☆★☆★一把魔法竖琴？\n");
 						 		  }
 						 		  else if (9 == chara)
 						 		  {
-						 		   printf("�����ս����Ϊʳ��ħ\n");
+						 		   printf("★☆★☆战锤名为食人魔\n");
 						 		  }
 						 		  else if (10 == chara)
 						 		  {
-						 		   printf("�����������Ϊ����֮��\n");
+						 		   printf("★☆★☆阔剑名为复仇之刃\n");
 						 		  }
 								   hp+=50,hp2+=50,atk+=20;
 								   }
@@ -592,11 +592,11 @@ int main(void)
 						 	 {
 						 	 	if(rand()%1001-500<0)
 						 	 	{
-						 		 	printf("���ʲݵػ�Ӧ���㣬������һ�ѻ���պϵĸ���\n");
+						 		 	printf("神潦草地回应了你，给了你一把还算凑合的斧子\n");
 						 		 	hp+=30,hp2+=30,atk+=10;
 						 		 }
 						 		 else{
-						 		 	printf("��û������\n");
+						 		 	printf("神没搭理你\n");
 						 		 }
 						 	 }
 						 	 }
@@ -607,7 +607,7 @@ int main(void)
 				 	
 				 	
 				 };break;
-				 case 3:	printf("��������������ʵ��������Ҳû���������ô�ͣ�͵Ц.jpg+��Ц.jpg��");break;
+				 case 3:	printf("额……不妨试试嘛，其实……爆率也没你想象的那么低（偷笑.jpg+奸笑.jpg）");break;
 		}break;
 	
  }
@@ -615,57 +615,57 @@ int main(void)
   }
  
   printf("\n\n\n");
-  } while (c!= 1);/*�׶��¼���*/
+  } while (c!= 1);/*首都事件组*/
  		
-  printf("�������˶����Ǳ���������˶�����������������ʼ������񶷣�\n");
-  printf("��������������ˣ��ݵ���Խ����");
-  int hp3 = 2500,atk3=0 ;/*�������Ѫ����������*/
+  printf("你来到了恶龙城堡，你见到了恶龙！你抽出长剑，开始与巨龙恶斗！\n");
+  printf("恶龙吼道：“凡人！休得谮越！”");
+  int hp3 = 2500,atk3=0 ;/*定义敌人血量、攻击力*/
   for(atk3=0;atk3<50;++atk3){
   	atk3=rand()%51+50;
   }
-  printf("\n��۲쵽��������2500������!\n");
-  do/*�����׶�*/
+  printf("\n你观察到恶龙还有2500点生命!\n");
+  do/*操作阶段*/
   {
-   printf("�ֵ����ж��ˣ�\n1.��ͨ���� 2.���⼼�� 3.��Ϣ 4.�ж�ս������");
+   printf("轮到你行动了！\n1.普通攻击 2.特殊技能 3.休息 4.判断战局形势");
    scanf("%d", &b);
    switch (b) {
    case 1: {hp3 -= atk;
-    printf("��������Ϳ��˹�ȥ�������ܵ�%d���˺�����������%d��Ѫ��!\n", atk,hp3);
+    printf("你向恶龙猛砍了过去！恶龙受到%d点伤害！恶龙还有%d点血量!\n", atk,hp3);
     
     break;
    };
-   case 2: {//hp3 -= skill,mp2-=skill*0.75;�ϰ�
+   case 2: {//hp3 -= skill,mp2-=skill*0.75;废案
      if (mp2>0)
      	{
 		 hp3 -= skill,mp2-=50;
 		 switch (h) {
 		 	case 1:
-		 		 printf("��Զ���ʹ���˼��ܣ�ʮ��ն�������ܵ�%d���˺�����������%d��Ѫ��!�㻹ʣ%d��������\n", skill,hp3,mp2);
+		 		 printf("你对恶龙使用了技能：十字斩！恶龙受到%d点伤害！恶龙还有%d点血量!你还剩%d点能量！\n", skill,hp3,mp2);
 		 		break;
 		 	case 2:
-		 		 printf("��Զ���ʹ���˼��ܣ���ӰͻϮ�������ܵ�%d���˺�����������%d��Ѫ��!�㻹ʣ%d��������\n", skill,hp3,mp2);
+		 		 printf("你对恶龙使用了技能：暗影突袭！恶龙受到%d点伤害！恶龙还有%d点血量!你还剩%d点能量！\n", skill,hp3,mp2);
 		 		break;
 		 	case 3:
-		 		 printf("��Զ���ʹ���˼��ܣ���֮ս�������ܵ�%d���˺�����������%d��Ѫ��!�㻹ʣ%d��������\n", skill,hp3,mp2);
+		 		 printf("你对恶龙使用了技能：万剑之战！恶龙受到%d点伤害！恶龙还有%d点血量!你还剩%d点能量！\n", skill,hp3,mp2);
 		 		break;
 		 	case 4:
-		 		 printf("��Զ���ʹ���˼��ܣ�ħ���Ⲩ�������ܵ�%d���˺�����������%d��Ѫ��!�㻹ʣ%d��������\n", skill,hp3,mp2);
+		 		 printf("你对恶龙使用了技能：魔法光波！恶龙受到%d点伤害！恶龙还有%d点血量!你还剩%d点能量！\n", skill,hp3,mp2);
 			 	break;
 			case 5:	
-			      printf("��Զ���ʹ���˼��ܣ���Ǯ���ܣ������ܵ�%d���˺�����������%d��Ѫ��!�㻹ʣ%d��������\n", skill,hp3,mp2);
+			      printf("你对恶龙使用了技能：金钱万能！恶龙受到%d点伤害！恶龙还有%d点血量!你还剩%d点能量！\n", skill,hp3,mp2);
 			break;
 		 }
 		 
      	}
 	else
 		{
-			printf("�Ƿ���������������ľ��ˣ�");
+			printf("非法操作！你的能量耗尽了！");
 			hp3-=0,mp2-=0;
 		}
 	break;
    };
    case 3: {
-    printf("�㿪ʼ��Ϣ��Ѫ����ָ���50��HP��50��MP��\n");
+    printf("你开始休息回血。你恢复了50点HP，50点MP！\n");
     hp2 += 50;mp2 += 50;
     if (hp2 > hp)
     {
@@ -674,16 +674,16 @@ int main(void)
     if (mp2 > mp)
     {
      mp2 = mp;
-    };/*��ֹ��ֵ���*/
+    };/*防止数值溢出*/
     break;
    }
-   case 4:state(hp, hp2, mp, mp2, atk);printf("\n��������%d��Ѫ��",hp3);
+   case 4:state(hp, hp2, mp, mp2, atk);printf("\n恶龙还有%d点血量",hp3);
    };
    hp2 -= atk3;
-   printf("�ֵ������ж��ˣ������������棡���������%d���˺����㻹ʣ%d��Ѫ����", atk3,hp2);
+   printf("轮到恶龙行动了！恶龙呼吸烈焰！对你造成了%d点伤害！你还剩%d点血量！", atk3,hp2);
    if (hp2 <= 0) {
-    printf("\n\n�㱻�ճ���һ���!�����ˣ��㱻��������ˣ��ⶼ�򲻹����Ͻ��ؿ��ɣ�");
-    printf("��Ϸ�������밴ENTER���˳���");scanf("%d", &a);
+    printf("\n\n你被烧成了一撮灰!你死了！你被恶龙打败了！这都打不过，赶紧重开吧！");
+    printf("游戏结束。请按ENTER键退出。");scanf("%d", &a);
     return 0;
  
     
@@ -691,179 +691,179 @@ int main(void)
      
   }
    while (hp3 > 0);
-  printf("\n������Ѫ�������ˣ�\n���������ˡ���Ҫ��Ϊ��ʹ�����ң����࣡��һ�л�û�ꡭ����\n������˶������ȳ��˹������Ӵ˹������Ҹ�����������㷢���Լ��ĸ첲�ϳ��������ۡ�����\n");
-  printf("����Ϊ�Լ��Ѿ��㹻ǿ��ȥ�����µ�ð���ˣ�ȫ����õ�������Ϊ�������˿��ף�");hp+=500;hp2+=500;gold+=5000;
+  printf("\n恶龙的血量归零了！\n恶龙倒下了“不要以为这就打败了我，人类！这一切还没完……”\n你击败了恶龙！救出了公主！从此过上了幸福的生活！但是你发现自己的胳膊上出现了龙鳞……。\n");
+  printf("你认为自己已经足够强大去开启新的冒险了！全国最好的铁匠铺为你打造好了盔甲！");hp+=500;hp2+=500;gold+=5000;
   int a1=0,b1=0,c1= 0,d1=0,e1=0,f1=0,m1=0,n1=0;
  do{
-   printf("�����ڵ�λ���� �����׶���\n��Ŀǰ��״̬��\n");
+   printf("你现在的位置是 王国首都。\n你目前的状态是\n");
    state(hp,hp2,mp,mp2,atk);
-   printf("  �������н��%d������Ը֮Դ%d����\n�����ڿ���ȥ:\n",gold,core);
-  printf("1.ʥ�����ڵ�����֮�� 2.�������� 3.�õ� 4.��� 5.ҽԺ 6.�ĳ� 7.��Ը��\n");
+   printf("  你现在有金币%d个，许愿之源%d个。\n你现在可以去:\n",gold,core);
+  printf("1.圣龙所在的世界之巅 2.神级武器铺 3.旅店 4.神殿 5.医院 6.赌场 7.许愿池\n");
   scanf("%d", &c1); 
   switch (c1){
-  case 1: /*�����Ǳ�*/ {
-   printf("��ȷ����ǰ������֮�ۼ�������һ��ʷʫ���ս������\nȷ����1//  ȡ��//0\n");
+  case 1: /*恶龙城堡*/ {
+   printf("你确定吗？前往世界之巅即将面临一场史诗般的战斗……\n确定：1//  取消//0\n");
    scanf("%d", &a1);
    if (a1 != 1)
    c1 = 5;
    break;
   };
-  case 2:/*������*/ {
-   puts("�������������̡�");
-   puts("�ϰ壺��ӭ���٣���Ҫ��ʲô��\n������ʲô?");
-   printf("1.��Լ��-2000g 2.��ҫ��-3000g 3.�׹�����-2500g 4.���ۼ�-5000g 5.�����ϰ�\n");scanf("%d", &b1);
+  case 2:/*武器铺*/ {
+   puts("你来到了武器铺。");
+   puts("老板：欢迎光临！想要点什么？\n你打算干什么?");
+   printf("1.誓约剑-2000g 2.日耀剑-3000g 3.抛光银盾-2500g 4.龙鳞甲-5000g 5.攻击老板\n");scanf("%d", &b1);
    switch (b1)
    {
-   case 1:/*����+*/ {
+   case 1:/*铁剑+*/ {
     if (gold < 2000) {
-     printf("��Ҳ��㣡");
+     printf("金币不足！");
      
     }
     else
     {
-     puts("��װ������Լ����������+200��");
+     puts("你装备了誓约剑，攻击力+200！");
      gold -= 2000;atk += 200;
     }
     break;
     ;}
-   case 2:/*����+*/{
+   case 2:/*银剑+*/{
     if (gold < 3000) {
-     printf("��Ҳ��㣡");
+     printf("金币不足！");
  
     }
     else
     {
-     puts("��װ������ҫ����������+400��");
+     puts("你装备了日耀剑，攻击力+400！");
      gold -= 3000;atk += 400;
     }
     break;
    };
-   case 3:/*���+*/ {
+   case 3:/*金盾+*/ {
     if (gold < 2000) {
-     printf("��Ҳ��㣡");
+     printf("金币不足！");
  
     }
     else
     {
-     puts("��װ�����׹����ܣ��������+1000��");
+     puts("你装备了抛光银盾，最大生命+1000！");
      gold -= 2500;hp += 1000;hp2 += 1000;
     }
     break;
     }
-   case 4:/*ʥ��+*/ {
+   case 4:/*圣盾+*/ {
     if (gold < 5000) {
-     printf("��Ҳ��㣡");
-     printf("�ϰ�˵�������������ۼף��Ҷ�����!��");
+     printf("金币不足！");
+     printf("老板说：“你买不起龙鳞甲！我都买不起!”");
  
     }
     else
     {
-     puts("��װ�������ۼף��������+2000�����⼼�ܵĻ����˺�����ˣ�");
-     puts("��óɾͣ�ʥ��ʿ��");
+     puts("你装备了龙鳞甲，最大生命+2000！特殊技能的基础伤害提高了！");
+     puts("获得成就：圣剑士！");
      gold -= 5000;hp += 5000;hp2 += 2000;skill += 300;
     };
     break;
    }
-   case 5:{int y1=0;printf("��ȷ����\n1.ȷ�� 2.����");scanf("%d",&y1);
+   case 5:{int y1=0;printf("你确定吗？\n1.确定 2.算了");scanf("%d",&y1);
       if(y1!=1){break;}
-	  else {printf("�����һ���ϰ�!\n�ϰ�������!\n�������������\n�ϰ����������ս����Ϊ����֮��!\n�ϰ����һ���㣡\nһ������������㣡�����˹�ȥ��\n�ϰ�����һ�£�\n�ϰ�����ʩչ��һ��ħ����\n�㿴�����ˣ��ϰ����һ�£��׻���һ���㣡\n�����ˡ�����");
+	  else {printf("你打了一下老板!\n老板生气了!\n“你个人渣！”\n老板挥舞着他的战锤名为雷神之锤!\n老板打了一下你！\n一道闪电击中了你！你晕了过去！\n老板踢了一下！\n老板向你施展了一个魔法！\n你看不见了！老板打了一下！雷击了一下你！\n你死了。。。");
    return 0;}
 }
    }break;
    };
-  case 3:/*�õ�*/ {
-   puts ("�㿴���ù����кܶ��ˡ�����Ҫ��˭\n1.���Ե�Сͯ�� 2.һ�����ص��� 3.�õ��ϰ� 4.Ư�����ϰ�Ů�� 5.һ������������� 6.�ͽ𾯹�");scanf("%d",&f1);
+  case 3:/*旅店*/ {
+   puts ("你看到旅馆里有很多人……你要找谁\n1.门旁的小童仆 2.一个神秘的人 3.旅店老板 4.漂亮的老板女儿 5.一个鬼鬼祟祟的人 6.赏金警官");scanf("%d",&f1);
    switch (f1){
-   	case 1:{printf("Сͯ�ͼ������æ�¹򣺡��������£���\n�㲢û��˵ʲô,ֻ�Ǿ����е㲻���");break;} 
+   	case 1:{printf("小童仆见到你慌忙下跪：“国王陛下！”\n你并没有说什么,只是觉得有点不舒服");break;} 
    case 2:{
-   printf("���ٴο����Ǹ����Ŷ�������ص��ˣ����߽�ʱ������������,����������,ˡ������ϥ�Ƿ��ײ��������¹�\n");
-   printf("������İ�����ʾʮ�ָ�л������ʲô���𾴵Ĺ������鷳�����黹�ں��桱\n");
-   printf("��ɱ���������������嶼����ǿ������䣬�����߻���������\n");
-   printf("���������һ��ԶԶû��ô��...\n");
-   printf("������ʲô��\n5//��������û�и��õķ���\n6//������л���뿪\n");
+   printf("你再次看到那个披着斗篷的神秘的人，你走进时那人向你行礼,“国王陛下,恕我年老膝盖发炎不能向您下跪”\n");
+   printf("你对他的帮助表示十分感谢“这算什么，尊敬的国王！麻烦的事情还在后面”\n");
+   printf("你杀死了那条龙，龙族都有着强大的诅咒，屠龙者会变成龙……\n");
+   printf("好像事情的一切远远没那么简单...\n");
+   printf("你打算干什么？\n5//问他还有没有更好的方法\n6//向他道谢并离开\n");
    scanf("%d",&d1);
    if (d1!=6)
    {
-   	printf("��������ת��ͷ����������ʮ�ֲ��ϣ���ЦЦ����˵������Ҫ���°������������������ĵ�������˵�ձ㻯����Ӱ��ʧ�ˣ�����һ����ֵĸо���Ȼ����ʧ��\n");
+   	printf("那神秘人转过头，他的脸旁十分苍老，他笑笑对你说：“不要害怕啊，国王，听从你内心的声音”说罢便化作黑影消失了，你有一种奇怪的感觉，然后消失了\n");
    }
    else
     {
-	printf("��������˵����Ը������²�ʢ��ս�޲�ʤ����˵�գ��㻯��һ��������ʧ��\n");
+	printf("那神秘人说：“愿陛下武德昌盛，战无不胜！”说罢，便化成一缕青烟消失了\n");
 	}
    
 
       break;}
-    case 3:{printf("�ϰ������߿࣬��Ϊ˰��Ҫ����ѹ����");break;} 
-    case 4:{printf("����ϰ��Ů���ĵĺ���죬��Ϊ�ϰ�Ů������λ��ʿд��һ���ţ��ϰ��Ů���ܸм���");break;}  
-    case 5:{printf("�Ǹ��˶߶����µؿ����㣬��о����Ծ�\n");
-    printf("������ʲô��\n");
-    printf("1.ץס����������ô����   2.��֮����\n");
+    case 3:{printf("老板向你诉苦，因为税务要把他压垮了");break;} 
+    case 4:{printf("你和老板的女儿聊的很愉快，你为老板女儿给那位骑士写了一封信，老板的女儿很感激你");break;}  
+    case 5:{printf("那个人哆哆嗦嗦地看向你，你感觉不对劲\n");
+    printf("你打算干什么？\n");
+    printf("1.抓住他，问他怎么回事   2.置之不理\n");
 	scanf("%d",&e1);
 	if (e1!=2)
 	{
-		printf("���˶߶����µ�˵�������������������٣����䡭��Ѫϴ��ء���֪������װ��\n");
-		printf("������������\n");
-		printf("ֻ����Ц�����������������������������һ������\n");
-		printf("��Ц�����㻹�ǵõ�ʱ��Լ����������£�\n���������û������\n");
-		printf("��ϣ�����ܰ���ң���\n");
-		printf("�����ˣ���֪���ȥ���������������ֻ��ǿ���ʥ����Ѫ���������ⲡ�����㷢��ҪΪ�����ҵ���ҩ\n��лл��������");
+		printf("那人哆哆嗦嗦地说：“龙……神龙…降临，诅咒……血洗大地”你知道他在装疯\n");
+		printf("你喝令随从退下\n");
+		printf("只见他笑道：“且随我来”你跟着他来到了一处角落\n");
+		printf("他笑道，你还记得当时的约定嘛，国王陛下？\n你告诉他你没有忘记\n");
+		printf("“希望你能帮帮我！”\n");
+		printf("你震惊了！不知如何去做，最后他告诉你只有强大的圣龙龙血才能治疗这病……你发誓要为你们找到解药\n“谢谢国王！”");
 	}
 	else{
-		printf("��������ˡ���\n");
-		printf("�����ܸо����Ծ�����");
+		printf("你独自走了……\n");
+		printf("但你总感觉不对劲……");
 	};break;
 	}
-    case 6:{printf("�г����������£��������ǣ���\n���Ƿ�Ҫ��������\n3.����\n4.������");
+    case 6:{printf("市长道：“陛下，请帮帮我们！”\n你是否要接受任务？\n3.接受\n4.不接受");
     scanf("%d",&m1);
 	if(m1!=4){
-		printf("�г�˵���������һ�ｭ�����������ܱߵ������ﵷ�ң��鷳�����������ǣ���\n�ǻ�С���������û�������������˲��ҵ��˽�������");
-		printf("��������ɽկ��������˽�������������������ʼ��ս����\n");
-		  printf("�������������������£���Ȱ����˼��������\n����������ˣ�");
-		  int hp6 = 2000,atk6=80 ;/*�������Ѫ����������*/
+		printf("市长说：“最近有一伙江洋大盗常常在周边的镇子里捣乱，麻烦陛下肃清他们！”\n那伙小贼你根本就没放在眼里，你出发了并找到了江洋大盗！");
+		printf("你来到了山寨，你见到了江洋大盗！你抽出长剑，开始了战斗！\n");
+		  printf("江洋大盗道：“国王陛下，我劝你三思。。。”\n你更加生气了！");
+		  int hp6 = 2000,atk6=80 ;/*定义敌人血量、攻击力*/
 		  
-		  printf("\n��۲쵽����������2000������!\n");
-		  do/*�����׶�*/
+		  printf("\n你观察到江洋大盗还有2000点生命!\n");
+		  do/*操作阶段*/
 		  {
-		   printf("�ֵ����ж��ˣ�\n1.��ͨ���� 2.���⼼�� 3.��Ϣ 4.�ж�ս������");
+		   printf("轮到你行动了！\n1.普通攻击 2.特殊技能 3.休息 4.判断战局形势");
 		   scanf("%d", &b1);
 		   switch (b1) {
 		   case 1: {hp6-= atk;
-		    printf("���������Ϳ��˹�ȥ���������ܵ�%d���˺�������������%d��Ѫ��!\n", atk,hp6);
+		    printf("你向江洋大盗猛砍了过去！江洋大盗受到%d点伤害！江洋大盗还有%d点血量!\n", atk,hp6);
 		    
 		    break;
 		   };
-		   case 2: {//hp3 -= skill,mp2-=skill*0.75;�ϰ�
+		   case 2: {//hp3 -= skill,mp2-=skill*0.75;废案
 		     if (mp2>0)
 		     	{
 				 hp6 -= skill,mp2-=50;
 				 switch (h) {
 				 	case 1:
-				 		 printf("��Խ�����ʹ���˼��ܣ�ʮ��ն���������ܵ�%d���˺�������������%d��Ѫ��!�㻹ʣ%d��������\n", skill,hp6,mp2);
+				 		 printf("你对江洋大盗使用了技能：十字斩！江洋大盗受到%d点伤害！江洋大盗还有%d点血量!你还剩%d点能量！\n", skill,hp6,mp2);
 				 		break;
 				 	case 2:
-				 		 printf("��Խ�����ʹ���˼��ܣ���ӰͻϮ���������ܵ�%d���˺�������������%d��Ѫ��!�㻹ʣ%d��������\n", skill,hp6,mp2);
+				 		 printf("你对江洋大盗使用了技能：暗影突袭！江洋大盗受到%d点伤害！江洋大盗还有%d点血量!你还剩%d点能量！\n", skill,hp6,mp2);
 				 		break;
 				 	case 3:
-				 		 printf("��Խ�����ʹ���˼��ܣ���֮ս���������ܵ�%d���˺�������������%d��Ѫ��!�㻹ʣ%d��������\n", skill,hp6,mp2);
+				 		 printf("你对江洋大盗使用了技能：万剑之战！江洋大盗受到%d点伤害！江洋大盗还有%d点血量!你还剩%d点能量！\n", skill,hp6,mp2);
 				 		break;
 				 	case 4:
-				 		 printf("��Խ�����ʹ���˼��ܣ�ħ���Ⲩ���������ܵ�%d���˺�������������%d��Ѫ��!�㻹ʣ%d��������\n", skill,hp6,mp2);
+				 		 printf("你对江洋大盗使用了技能：魔法光波！江洋大盗受到%d点伤害！江洋大盗还有%d点血量!你还剩%d点能量！\n", skill,hp6,mp2);
 					 	break;
 					case 5:	
-					      printf("��Խ�����ʹ���˼��ܣ���Ǯ���ܣ��������ܵ�%d���˺�������������%d��Ѫ��!�㻹ʣ%d��������\n", skill,hp6,mp2);
+					      printf("你对江洋大盗使用了技能：金钱万能！江洋大盗受到%d点伤害！江洋大盗还有%d点血量!你还剩%d点能量！\n", skill,hp6,mp2);
 					break;
 				 }
 				 
 		     	}
 			else
 				{
-					printf("�Ƿ���������������ľ��ˣ�");
+					printf("非法操作！你的能量耗尽了！");
 					hp6-=0,mp2-=0;
 				}
 			break;
 		   };
 		   case 3: {
-		    printf("�㿪ʼ��Ϣ��Ѫ����ָ���50��HP��50��MP��\n");
+		    printf("你开始休息回血。你恢复了50点HP，50点MP！\n");
 		    hp2 += 50;mp2 += 50;
 		    if (hp2 > hp)
 		    {
@@ -872,23 +872,23 @@ int main(void)
 		    if (mp2 > mp)
 		    {
 		     mp2 = mp;
-		    };/*��ֹ��ֵ���*/
+		    };/*防止数值溢出*/
 		    break;
 		   }
-		   case 4:state(hp, hp2, mp, mp2, atk);printf("\n����������%d��Ѫ��",hp6);
+		   case 4:state(hp, hp2, mp, mp2, atk);printf("\n江洋大盗还有%d点血量",hp6);
 		   };
 		   hp2 -= atk6;
-		   printf("�ֵ��������ж��ˣ��������������������������������%d���˺����㻹ʣ%d��Ѫ����", atk6,hp2);
+		   printf("轮到江洋大盗行动了！江洋大盗挥舞着他的阔剑！对你造成了%d点伤害！你还剩%d点血量！", atk6,hp2);
 		   if (hp2 <= 0) {
-		    printf("\n\n�㱻ɱ����!�����ˣ��㱻����������ˣ��������������");
-		    printf("��Ϸ�������밴ENTER���˳���");scanf("%d", &a1);
+		    printf("\n\n你被杀死了!你死了！你被江洋大盗打败了！猥琐发育，别浪");
+		    printf("游戏结束。请按ENTER键退出。");scanf("%d", &a1);
 		    return 0;
 		 
 		    
 		   };
 		     
 		  } while (hp6 > 0);
-		  printf("\n���������������ˣ�\n���Ǻǣ��������㲻֪�����ʲô...��������˽�����������Ž������Ľ������г�.����л���£����Ǳ�ְ��һ���ʾ...��\n");
+		  printf("\n江洋大盗被你消灭了！\n“呵呵，国王，你不知你干了什么...”你击败了江洋大盗！你带着江洋大盗的剑来见市长.“多谢陛下！这是卑职的一点表示...”\n");
 		  gold+=1000,core+=2;
 	}
 	
@@ -897,73 +897,73 @@ int main(void)
 	  
   };break;
   }
-  case 4:/*�����*/ {int donate;
+  case 4:/*练武馆*/ {int donate;
    
-   if (criminal!=0){printf("������д�ŭ���������Ǿܾ��������");}
-   else{puts("��Ҫ������������\n1.ʥ��ʿ֮��¹�˹��-350g 2.��սʿ֮������-500g 3.��ʦ֮��÷��-250g 4.�뿪5.������Ů��˾��̸");scanf("%d", &b1);
+   if (criminal!=0){printf("你的罪行触怒了众神！他们拒绝你进入神殿！");}
+   else{puts("你要供奉那座神像？\n1.圣骑士之神奥古斯丁-350g 2.狂战士之神索尔-500g 3.法师之神梅林-250g 4.离开5.和神庙女祭司交谈");scanf("%d", &b1);
    switch (b1) {
    case 1: {
     if (gold < 350) {
-     printf("��Ҳ��㣡");
-     printf("ʥ��ʿ֮�������˵�������ˣ�������������\n");
-     printf("����������ϰ��");
-     printf("��о��Լ���������ˣ�");atk-=10;
+     printf("金币不足！");
+     printf("圣骑士之神严肃地说：“凡人，汝甚傲慢！”\n");
+     printf("汝需重新修习！");
+     printf("你感觉自己变得虚弱了！");atk-=10;
     }
     else
     {
-     puts("���⼼�ܵĻ����˺�����ˣ���Ŀ��������ˣ�");
+     puts("特殊技能的基础伤害提高了！你的抗性提升了！");
      gold -= 350;skill += 150;hp+=200;hp2+=200;
-     printf("ʥ��ʿ֮��˵������֮����������ο��Ը���ܱ��ֱ��ģ���");
+     printf("圣骑士之神说：“汝之进步令我欣慰！愿你能保持本心！”");
     };
     break;
    }
    case 2: {
     if (gold < 500) {
-     printf("��Ҳ��㣡");
-     printf("��սʿ֮������������괥ŭ���ᡱ");
-     printf("һ��������������");
-     printf("��絽���㣡");hp2-=100;
+     printf("金币不足！");
+     printf("狂战士之神索尔低语：“汝触怒了吾”");
+     printf("一道闪电从天而降！");
+     printf("这电到了你！");hp2-=100;
     }
     else
     {
-     puts("��Ĺ��������˺�����ˣ��������ֵ�����ˣ�");
+     puts("你的攻击基础伤害提高了！最大生命值提升了！");
      gold -= 500;atk += 150;hp+=300;hp2+=300;
-      printf("��սʿ֮������˵������Ľ���������ο����ܱ���Ҷ�������");
+      printf("狂战士之神索尔说：“你的进步让我欣慰！打架别给我丢脸！”");
     };
     break;
    }
    case 3: {
     if (gold < 250) {
-     printf("��Ҳ��㣡");
-     printf("��ʦ֮��÷��̾����������ʧ�˵�·�����ˣ�ˡ�᲻�ܰ��㡱");
-     printf("��о������֪�ˣ�");skill-=10;
+     printf("金币不足！");
+     printf("法师之神梅林叹道：“汝迷失了道路，凡人，恕吾不能帮你”");
+     printf("你感觉变得无知了！");skill-=10;
  
     }
     else
     {
-     puts("��ķ���ֵ�����ˣ�");
+     puts("你的法力值上升了！");
      gold -= 250;mp += 150;mp2 += 150;
-      printf("��ʦ˵������Ľ���������ο��Ը���ܸ��õ�ʹ�����ħ������");
+      printf("法师说：“你的进步让我欣慰！愿你能更好地使用你的魔法！”");
     };
     break;}
    case 4:break;
-   case 5:{printf("������Ů��˾����Ϊ�������Ǯ...\n���������?");scanf("%d",&donate);
+   case 5:{printf("神庙的女祭司请你为神庙捐点钱...\n你打算捐多少?");scanf("%d",&donate);
    
-    if (donate>gold){donate=gold;printf("�������Ǯȫ������Ů��˾");}
-    if(donate >=1000){printf("��Ŀ�������������������������һ��ף��");gold-=donate;atk+=500;hp+=500;hp2+=500;mp+=100;mp2+=100;}
+    if (donate>gold){donate=gold;printf("你把所有钱全都给了女祭司");}
+    if(donate >=1000){printf("你的慷慨深深地令我佩服，我赠与你一个祝福");gold-=donate;atk+=500;hp+=500;hp2+=500;mp+=100;mp2+=100;}
     else if(donate<1000&&donate>500){
-      printf("��л�������Ĺ���");gold-=donate;atk+=300;hp+=200,hp2+=200;}
+      printf("感谢你所做的贡献");gold-=donate;atk+=300;hp+=200,hp2+=200;}
       else if (donate<=500&&donate>100){
-        printf("����һ���ϵ���");gold-=donate;hp+=150;hp2+=150;
+        printf("你是一个虔诚的人");gold-=donate;hp+=150;hp2+=150;
       }
-      else {printf("С����");gold-=donate;}
+      else {printf("小气鬼");gold-=donate;}
     };break;
    }
-   //default: {printf("����������");break;}
+   //default: {printf("你的输入错误！");break;}
    
    }};
    break;
-  case 5:/*ҽԺ*/{printf("150�������������ʹ���ָ�����������\n1.����\n2.����");
+  case 5:/*医院*/{printf("150金币治愈所有伤痛！恢复所有能量！\n1.治疗\n2.算了");
   scanf("%d",&n1);
   if(n1!=2){
   	hp2 += 9999;mp2 += 9999,gold-=150;
@@ -978,102 +978,102 @@ int main(void)
   };
 
   };break;
-  case 6:/*�ĳ�*/{int guess1,deal1;
+  case 6:/*赌场*/{int guess1,deal1;
     srand((unsigned)time(NULL));
     int magic1=rand()%100+1;
     int counter1=0;
-    	printf("��ӭ����С��˹�ӣ�����Ķľ��ǲ����֣���������в�ͬ�Ľ������֮�����Ǯ��\n�������ע���٣�");scanf("%d",&deal1);gold-=deal1;
+    	printf("欢迎来到小拉斯加！这里的赌局是猜数字！五次以内有不同的奖金！五次之外就输钱！\n你打算下注多少？");scanf("%d",&deal1);gold-=deal1;
   
   	        
-  	               do{   printf("��һ������:����");
+  	               do{   printf("猜一个数字:‘‘");
   	                scanf("%d",&guess1);
   	               counter1++;
   	              if(guess1>magic1)
-  	              printf("�´��ˣ�\n");
+  	              printf("猜大了！\n");
   	              else
   	  
   	                  if(guess1<magic1)
-  	                      printf("��С��!\n");
+  	                      printf("猜小了!\n");
   	                   else
-  	                  printf("�¶���!\n") ;
+  	                  printf("猜对了!\n") ;
   	  
   	      }while(guess1!=magic1);
-  	          printf("��һ������%d��\n",counter1);
+  	          printf("你一共猜了%d次\n",counter1);
   	          switch(counter1)
   	          {
-  	              case 1:printf("����֮��\n");gold+=deal1*5;break;
-  	              case 2:printf("��������,ȥ���Ʊ��\n");gold+=deal1*3;break;
-  	              case 3:printf("��������\n");gold+=deal1*2.5;break;
-  	              case 4:printf("������΢��һ��\n");gold+=deal1*1.5;break;
-  	              case 5:printf("����ˮƽ\n");gold+=deal1*1.25;break;
-  	              default:printf("�����ˣ��ؼ�����������ɣ�\n");
+  	              case 1:printf("天命之子\n");gold+=deal1*5;break;
+  	              case 2:printf("运气爆棚,去买彩票吧\n");gold+=deal1*3;break;
+  	              case 3:printf("不错不错\n");gold+=deal1*2.5;break;
+  	              case 4:printf("运气稍微好一点\n");gold+=deal1*1.5;break;
+  	              case 5:printf("正常水平\n");gold+=deal1*1.25;break;
+  	              default:printf("你输了！回家再练个几年吧！\n");
   	          }
-  	          if (gold<0){printf("��Ƿ��һƨ��ծ���㱻������һ�ٲ��ӳ��˶ĳ���");hp2-=50;}
+  	          if (gold<0){printf("你欠了一屁股债！你被暴打了一顿并扔出了赌场！");hp2-=50;}
   	      
     };break;
-      case 7:/*��Ը�س鿨*/{
-	  puts("�������˳����������Ը���У���ˮ���峺�����һ����Ž�ɫ�Ĺ�â����˵����ʥȪ��Ҳ����Ը������Ч��");
-	 printf("�������Ը��\n1:����һ�����Կ�2:үҪʮ���飡3:���ˣ����Ƿ����ˡ���\n");
+      case 7:/*许愿池抽卡*/{
+	  puts("你来到了城市中央的许愿池中，池水很清澈，并且还发着金色的光芒，据说这是圣泉，也许祈愿真有奇效？");
+	 printf("你打算许愿吗？\n1:单抽一发试试看2:爷要十连抽！3:算了，我是非洲人……\n");
 	 scanf("%d",&k);
 	 if(core<1)
 	 {
-	 	printf("�㻹û����Ը֮ԴŶ��ȥ�Ҿ����������ðɣ�");break;
+	 	printf("你还没有许愿之源哦！去找警官做任务获得吧！");break;
 	 }
 	 else{
 	 switch(k){
-	 	case 1:{printf("����Ͷ����Ը֮Դ��һ�̣���ˮɢ����������ɫ�Ĺ�â����Ȼ��");
+	 	case 1:{printf("在你投下许愿之源的一刻，池水散发着五颜六色的光芒……然后");
 		 core-=1;
 		 srand((unsigned)time(NULL));
 		 if (rand()%1001-70<0)//gold
 		 {
-		 	printf("��ǳ������ػ�Ӧ����ĺ�������鵽�˵���UP������Ϊ����֮���⣡ע���ⲻ�ǹ���");
+		 	printf("神非常积极地回应了你的呼唤！你抽到了当期UP武器名为雉草之道光！注意这不是梗！");
 		 	hp+=300,hp2+=300,atk+=100;
 		 }
 		 else
 		 {
 		 if(rand()%1001-190<0)	
-		 {printf("������ػ�Ӧ����ĺ�������õ���");  
+		 {printf("神认真地回应了你的呼唤，你得到了");  
 		 srand((unsigned)time(NULL));
 		 	int chara=rand()%10+1;
 		 	if (1 == chara)
 			  {
-			   printf("�����ﳤ����Ϊ����֮��\n");
+			   printf("★☆★☆★长剑名为火焰之剑\n");
 			  }
 			  else if (2 == chara)
 			  {
-			   printf("�����ﳤ����Ϊ��˪֮��\n");
+			   printf("★☆★☆★长剑名为冰霜之剑\n");
 			  }
 			  else if (3 == chara)
 			  {
-			   printf("������綾ذ����Ϊ��ѵ�����Ϳ�˶���\n");
+			   printf("★☆★☆★剧毒匕首名为这把刀可是涂了毒的\n");
 			  }
 			  else if (4 == chara)
 			  {
-			   printf("�����ﳤ����Ϊ������\n");
+			   printf("★☆★☆★长剑名为屠龙剑\n");
 			  }
 			  else if (5 == chara)
 			  {
-			   printf("������ս����Ϊ������\n");
+			   printf("★☆★☆★战锤名为粉碎者\n");
 			  }
 			  else if (6 == chara)
 			  {
-			   printf("������ս����Ϊ˺����\n");
+			   printf("★☆★☆★战斧名为撕裂者\n");
 			  }
 			  else if (7 == chara )
 			  {
-			   printf("�����Ȩ����Ϊ������ͽ\n");
+			   printf("★☆★☆权杖名为安德门徒\n");
 			  }
 			  else if (8 == chara)
 			  {
-			   printf("������һ��ħ�����٣�\n");
+			   printf("★☆★☆★一把魔法竖琴？\n");
 			  }
 			  else if (9 == chara)
 			  {
-			   printf("�����ս����Ϊʳ��ħ\n");
+			   printf("★☆★☆战锤名为食人魔\n");
 			  }
 			  else if (10 == chara)
 			  {
-			   printf("�����������Ϊ����֮��\n");
+			   printf("★☆★☆阔剑名为复仇之刃\n");
 			  }
 		 	//sliver
 		 	hp+=150,hp2+=150,atk+=70;
@@ -1082,11 +1082,11 @@ int main(void)
 		 {
 		 	if(rand()%1001-500<0)
 		 	{
-			 	printf("���ʲݵػ�Ӧ���㣬������һ�ѻ���պϵĸ���\n");
+			 	printf("神潦草地回应了你，给了你一把还算凑合的斧子\n");
 			 	hp+=50,hp2+=50,atk+=30;
 			 }
 			 else{
-			 	printf("��û������\n");
+			 	printf("神没搭理你\n");
 			 }
 		 }
 		 }
@@ -1095,11 +1095,11 @@ int main(void)
 	 	case 2:{
 		 	if(core<10)
 		 	{
-			 	printf("��û���ܹ�ʮ����Ը֮ԴŶ��ȥ�Ҿ����������ðɣ�");break;
+			 	printf("还没有攒够十个许愿之源哦！去找警官做任务获得吧！");break;
 			 }
 			 else
 			{
-				 printf("��ֱ������ˮ������ʮ����Ը֮Դ����ˮɢ���Ÿ�ǿ��������ɫ�Ĺ�â�����Ǵ������漣�� ���꣡\n\n");
+				 printf("你直接往池水里扔了十个许愿之源，池水散发着更强的五颜六色的光芒，还是大力出奇迹啊 少年！\n\n");
 					 {
 					 	srand((unsigned)time(NULL));
 					 	for(int i=0;i<10;i++)
@@ -1107,54 +1107,54 @@ int main(void)
 						 	core-=1;
 							 	 if (rand()%1001-70<0)//gold
 							 	 {
-							 	 	printf("��ǳ������ػ�Ӧ����ĺ�������鵽�˵���UP������Ϊ����֮���⣡ע���ⲻ�ǹ���\n");
+							 	 	printf("神非常积极地回应了你的呼唤！你抽到了当期UP武器名为雉草之道光！注意这不是梗！\n");
 							 	 	hp+=100,hp2+=100,atk+=50;
 							 	 }
 							 	 else
 							  {
 							 	 if(rand()%1001-190<0)	
-							 	 {printf("������ػ�Ӧ����ĺ�������õ���\n"); 
+							 	 {printf("神认真地回应了你的呼唤，你得到了\n"); 
 								  srand((unsigned)time(NULL));
 								  int chara=rand()%10+1;
 							 	 	if (1 == chara)
 							 		  {
-							 		   printf("�����ﳤ����Ϊ����֮��\n");
+							 		   printf("★☆★☆★长剑名为火焰之剑\n");
 							 		  }
 							 		  else if (2 == chara)
 							 		  {
-							 		   printf("�����ﳤ����Ϊ��˪֮��\n");
+							 		   printf("★☆★☆★长剑名为冰霜之剑\n");
 							 		  }
 							 		  else if (3 == chara)
 							 		  {
-							 		   printf("������綾ذ����Ϊ��ѵ�����Ϳ�˶���\n");
+							 		   printf("★☆★☆★剧毒匕首名为这把刀可是涂了毒的\n");
 							 		  }
 							 		  else if (4 == chara)
 							 		  {
-							 		   printf("�����ﳤ����Ϊ������\n");
+							 		   printf("★☆★☆★长剑名为屠龙剑\n");
 							 		  }
 							 		  else if (5 == chara)
 							 		  {
-							 		   printf("������ս����Ϊ������\n");
+							 		   printf("★☆★☆★战锤名为粉碎者\n");
 							 		  }
 							 		  else if (6 == chara)
 							 		  {
-							 		   printf("������ս����Ϊ˺����\n");
+							 		   printf("★☆★☆★战斧名为撕裂者\n");
 							 		  }
 							 		  else if (7 == chara )
 							 		  {
-							 		   printf("�����Ȩ����Ϊ������ͽ\n");
+							 		   printf("★☆★☆权杖名为安德门徒\n");
 							 		  }
 							 		  else if (8 == chara)
 							 		  {
-							 		   printf("������һ��ħ�����٣�\n");
+							 		   printf("★☆★☆★一把魔法竖琴？\n");
 							 		  }
 							 		  else if (9 == chara)
 							 		  {
-							 		   printf("�����ս����Ϊʳ��ħ\n");
+							 		   printf("★☆★☆战锤名为食人魔\n");
 							 		  }
 							 		  else if (10 == chara)
 							 		  {
-							 		   printf("�����������Ϊ����֮��\n");
+							 		   printf("★☆★☆阔剑名为复仇之刃\n");
 							 		  }
 									   hp+=50,hp2+=50,atk+=20;
 									   }
@@ -1165,11 +1165,11 @@ int main(void)
 							 	 {
 							 	 	if(rand()%1001-500<0)
 							 	 	{
-							 		 	printf("���ʲݵػ�Ӧ���㣬������һ�ѻ���պϵĸ���\n");
+							 		 	printf("神潦草地回应了你，给了你一把还算凑合的斧子\n");
 							 		 	hp+=30,hp2+=30,atk+=10;
 							 		 }
 							 		 else{
-							 		 	printf("��û������\n");
+							 		 	printf("神没搭理你\n");
 							 		 }
 							 	 }
 							 	 }
@@ -1180,7 +1180,7 @@ int main(void)
 					 	
 					 	
 					 };break;
-					 case 3:	printf("��������������ʵ��������Ҳû���������ô�ͣ�͵Ц.jpg+��Ц.jpg��");break;
+					 case 3:	printf("额……不妨试试嘛，其实……爆率也没你想象的那么低（偷笑.jpg+奸笑.jpg）");break;
 			}break;
 		
 	 }
@@ -1188,57 +1188,57 @@ int main(void)
   }
  
   printf("\n\n\n");
-  } while (c1 != 1);/*�׶��¼���*/
+  } while (c1 != 1);/*首都事件组*/
  		
-  printf("������������֮�ۣ��������ʥ����������������ʼ������񶷣�\n");
-  printf("ʥ������������ˣ���̰�����ᣬ������Ǵ����");
-  int hp5 = 20000,atk5=0 ;/*�������Ѫ����������*/
+  printf("你来到了世界之巅，你见到了圣龙！你抽出长剑，开始与巨龙恶斗！\n");
+  printf("圣龙吼道：“凡人！汝贪得无厌，必受天谴！”");
+  int hp5 = 20000,atk5=0 ;/*定义敌人血量、攻击力*/
   for(atk5=0;atk5<50;++atk5){
   	atk5=rand()%521+50;
   }
-  printf("\n��۲쵽ʥ������20000������!\n");
-do/*�����׶�*/
+  printf("\n你观察到圣龙还有20000点生命!\n");
+do/*操作阶段*/
   {
-   printf("�ֵ����ж��ˣ�\n1.��ͨ���� 2.���⼼�� 3.��Ϣ 4.�ж�ս������");
+   printf("轮到你行动了！\n1.普通攻击 2.特殊技能 3.休息 4.判断战局形势");
    scanf("%d", &b1);
    switch (b1) {
    case 1: {hp5 -= atk;
-    printf("����ʥ���Ϳ��˹�ȥ��ʥ���ܵ�%d���˺���ʥ������%d��Ѫ��!\n", atk,hp5);
+    printf("你向圣龙猛砍了过去！圣龙受到%d点伤害！圣龙还有%d点血量!\n", atk,hp5);
     
     break;
    };
-   case 2: {//hp3 -= skill,mp2-=skill*0.75;�ϰ�
+   case 2: {//hp3 -= skill,mp2-=skill*0.75;废案
      if (mp2>0)
      	{
 		 hp5 -= skill,mp2-=100;
 		 switch (h) {
 		 	case 1:
-		 		 printf("���ʥ��ʹ���˼��ܣ�ʮ��ն��ʥ���ܵ�%d���˺���ʥ������%d��Ѫ��!�㻹ʣ%d��������\n", skill,hp5,mp2);
+		 		 printf("你对圣龙使用了技能：十字斩！圣龙受到%d点伤害！圣龙还有%d点血量!你还剩%d点能量！\n", skill,hp5,mp2);
 		 		break;
 		 	case 2:
-		 		 printf("���ʥ��ʹ���˼��ܣ���ӰͻϮ��ʥ���ܵ�%d���˺���ʥ������%d��Ѫ��!�㻹ʣ%d��������\n", skill,hp5,mp2);
+		 		 printf("你对圣龙使用了技能：暗影突袭！圣龙受到%d点伤害！圣龙还有%d点血量!你还剩%d点能量！\n", skill,hp5,mp2);
 		 		break;
 		 	case 3:
-		 		 printf("���ʥ��ʹ���˼��ܣ���֮ս��ʥ���ܵ�%d���˺���ʥ������%d��Ѫ��!�㻹ʣ%d��������\n", skill,hp5,mp2);
+		 		 printf("你对圣龙使用了技能：万剑之战！圣龙受到%d点伤害！圣龙还有%d点血量!你还剩%d点能量！\n", skill,hp5,mp2);
 		 		break;
 		 	case 4:
-		 		 printf("���ʥ��ʹ���˼��ܣ�ħ���Ⲩ��ʥ���ܵ�%d���˺���ʥ������%d��Ѫ��!�㻹ʣ%d��������\n", skill,hp5,mp2);
+		 		 printf("你对圣龙使用了技能：魔法光波！圣龙受到%d点伤害！圣龙还有%d点血量!你还剩%d点能量！\n", skill,hp5,mp2);
 			 	break;
 			case 5:	
-			      printf("���ʥ��ʹ���˼��ܣ���Ǯ���ܣ�ʥ���ܵ�%d���˺���ʥ������%d��Ѫ��!�㻹ʣ%d��������\n", skill,hp5,mp2);
+			      printf("你对圣龙使用了技能：金钱万能！圣龙受到%d点伤害！圣龙还有%d点血量!你还剩%d点能量！\n", skill,hp5,mp2);
 			break;
 		 }
 		 
      	}
 	else
 		{
-			printf("�Ƿ���������������ľ��ˣ�");
+			printf("非法操作！你的能量耗尽了！");
 			hp5-=0,mp2-=0;
 		}
 	break;
    };
    case 3: {
-    printf("�㿪ʼ��Ϣ��Ѫ����ָ���50��HP��50��MP��\n");
+    printf("你开始休息回血。你恢复了50点HP，50点MP！\n");
     hp2 += 50;mp2 += 50;
     if (hp2 > hp)
     {
@@ -1247,26 +1247,26 @@ do/*�����׶�*/
     if (mp2 > mp)
     {
      mp2 = mp;
-    };/*��ֹ��ֵ���*/
+    };/*防止数值溢出*/
     break;
    }
-   case 4:state(hp, hp2, mp, mp2, atk);printf("\nʥ������%d��Ѫ��",hp5);
+   case 4:state(hp, hp2, mp, mp2, atk);printf("\n圣龙还有%d点血量",hp5);
    };
    hp2 -= atk5;
-   printf("�ֵ������ж��ˣ�ʥ�������Ⲩ�����������㣡���������%d���˺����㻹ʣ%d��Ѫ����", atk5,hp2);
+   printf("轮到恶龙行动了！圣龙发出光波！这烧伤了你！对你造成了%d点伤害！你还剩%d点血量！", atk5,hp2);
    if (hp2 <= 0) {
-    printf("\n\n�㱻�ֽ���˻�!�����ˣ��㱻ʥ������ˣ�");
-    printf("��Ϸ�������밴ENTER���˳���");scanf("%d", &a1);
+    printf("\n\n你被分解成了灰!你死了！你被圣龙打败了！");
+    printf("游戏结束。请按ENTER键退出。");scanf("%d", &a1);
     return 0;
  }
      
 }
    while (hp5 > 0);
-  printf("\nʥ����Ѫ�������ˣ�\nʥ�������ˡ��ܿ�ɣ����࣡��\n�������ʥ�������������Ǹ��˵����䣬����һ�л�ԶԶû�н���\n");
-  printf("Ҳ�������û�о�ͷ����������Ϊ����һ����֡���\n");
-  printf("�����Ǿ��ñ���һ����һ��������Ļ����ʹ�����������㡭��������������ȥ��������Ҫ�ģ�������һ������\n");
-  printf("��ص����ǣ���������ΪӢ�ۣ����ǻ����ţ����㲻Ϊ������\n");
-  printf("�㷢��һ��Ҫ������һ��");
-  printf("��Ϸ��������л���棡�����ڴ�v1.3.0�汾���µĴ���Ӣ�ۺ����������밴ENTER���˳���");scanf("%d", &a1);
+  printf("\n圣龙的血量归零了！\n圣龙倒下了“受苦吧，人类！”\n你击败了圣龙！解除了你和那个人的诅咒，但是一切还远远没有结束\n");
+  printf("也许这根本没有尽头，但是你认为这有一个结局……\n");
+  printf("你总是觉得背后一定有一个真正的幕后主使，他驱动着你……驱动着你玩下去，而你想要的，仅仅是一个结束\n");
+  printf("你回到都城，人民视你为英雄，他们欢呼着，但你不为所动。\n");
+  printf("你发誓一定要结束这一切");
+  printf("游戏结束！感谢游玩！敬请期待v1.3.0版本，新的传奇英雄和神器！。请按ENTER键退出。");scanf("%d", &a1);
  return 0;
 };
