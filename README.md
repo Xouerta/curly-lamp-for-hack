@@ -17,7 +17,7 @@ players can use the core to make wish!
 
 the god(the system ,of course) could possibly give you some kind repeats,or just leave you alone...
 
-have a happy game,and welcome to pull request!=
+Have a happy game,and welcome to pull request!
 =====
 2023.2.2
 Oh,Recent days I started to think about to add some new heros in it trough it already has over five heros.
