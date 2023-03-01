@@ -29,6 +29,21 @@ this game don't have sound,graphics or proper introductions
 Few players would enjoy a game only with a bunch of dully codes
 
 so I decide to change the lanuages of it and design a unique UI to make it colorful
+=====
+2023.3.1
+Sorry,recent days I have to get along with my tests,though I feel good at C,but I still don't feel good at math 
+
+I...put the game developing aside,but I have planned,about the game's future
+
+At first I decide to add a packing system in the game to let hero could only have the weapon no more than 10
+
+then I decide to add a new hero to make the game more colorful
+
+that hero I want to make it to have two skills,instead, he cannot use the ordinary attack,it's wise to save the MP
+
+I also think that I can turn the game into a more colorful and happy game ,more NPCs,more active interactions
+
+Maybe I need to study harder!
 
 
 
